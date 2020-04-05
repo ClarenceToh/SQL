@@ -44,3 +44,71 @@ SELECT name,
   ELSE 'Intense'
  END AS 'Mood'
 FROM movies;
+
+-- challenge
+SELECT year, number
+FROM babies
+WHERE name = 'Lillian' AND gender = 'F';
+
+SELECT DISTINCT name
+FROM babies
+WHERE name LIKE 'S%'
+LIMIT 20;
+
+SELECT name, gender, number
+FROM babies
+WHERE year = 1880
+ORDER BY number DESC
+LIMIT 10;
+
+SELECT *
+ FROM nomnom
+ WHERE cuisine = 'Japanese' AND price = '$$';
+
+ SELECT * 
+ FROM nomnom
+ WHERE name LIKE '%noodle%';
+
+ SELECT * 
+ FROM nomnom
+ WHERE health IS NULL;
+
+ SELECT title, publisher
+ FROM news
+ ORDER BY title ASC;
+
+ SELECT *
+ FROM news
+ WHERE title LIKE "%bitcoin%";
+
+SELECT * 
+ FROM news
+ WHERE category = 'b'
+ ORDER BY timestamp DESC
+ LIMIT 20;
+
+--World Populations SQL Practice
+
+SELECT population 
+from population_years
+WHERE country = "Gabon"
+ORDER BY population DESC
+LIMIT 1;
+
+SELECT DISTINCT country
+from population_years
+ORDER BY population ASC
+LIMIT 10;
+
+SELECT DISTINCT country
+from population_years
+WHERE population > 100 AND year = 2010;
+
+SELECT DISTINCT country
+from population_years
+WHERE country LIKE "%Islands%";
+
+SELECT * 
+FROM population_years
+WHERE country = 'Indonesia'
+AND year LIKE '20%0'
