@@ -31,3 +31,33 @@ CREATE TABLE awards (
    recipient TEXT NOT NULL,
    award_name TEXT DEFAULT 'Grammy'
 );
+
+-- project_1
+CREATE table friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+INSERT INTO friends(id, name, birthday)
+VALUES(1, Jane Doe, May 30th, 1990);
+INSERT INTO friends(id, name, birthday)
+VALUES(2, John Doe, May 29th, 1990);
+INSERT INTO friends(id, name, birthday)
+VALUES(3, Jay Doe, May 28th, 1990);
+
+UPDATE friends 
+SET name = 'Jane Smith' 
+WHERE id = 1; 
+
+ALTER TABLE friends 
+ADD COLUMN email TEXT; 
+
+UPDATE friends 
+SET email = 'jane@codecademy.com' 
+WHERE id = 1; 
+
+DELETE FROM friends 
+WHERE id = 1;
+
+SELECT * FROM friends;
